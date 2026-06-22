@@ -1,0 +1,248 @@
+/* =========================================================
+   Global Animations
+   Premium Educator Personal Brand
+========================================================= */
+
+/* ----------------------------------
+   Fade In
+---------------------------------- */
+
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+  
+    to {
+      opacity: 1;
+    }
+  }
+  
+  .fade-in {
+    animation: fadeIn 0.8s ease forwards;
+  }
+  
+  /* ----------------------------------
+     Fade Up
+  ---------------------------------- */
+  
+  @keyframes fadeUp {
+    from {
+      opacity: 0;
+      transform: translateY(40px);
+    }
+  
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .fade-up {
+    animation: fadeUp 0.8s ease forwards;
+  }
+  
+  /* ----------------------------------
+     Fade Down
+  ---------------------------------- */
+  
+  @keyframes fadeDown {
+    from {
+      opacity: 0;
+      transform: translateY(-40px);
+    }
+  
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .fade-down {
+    animation: fadeDown 0.8s ease forwards;
+  }
+  
+  /* ----------------------------------
+     Scale In
+  ---------------------------------- */
+  
+  @keyframes scaleIn {
+    from {
+      opacity: 0;
+      transform: scale(0.92);
+    }
+  
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  .scale-in {
+    animation: scaleIn 0.7s ease forwards;
+  }
+  
+  /* ----------------------------------
+     Blur Reveal
+  ---------------------------------- */
+  
+  @keyframes blurReveal {
+    from {
+      opacity: 0;
+      filter: blur(12px);
+    }
+  
+    to {
+      opacity: 1;
+      filter: blur(0);
+    }
+  }
+  
+  .blur-reveal {
+    animation: blurReveal 0.8s ease forwards;
+  }
+  
+  /* ----------------------------------
+     Floating Animation
+  ---------------------------------- */
+  
+  @keyframes floating {
+    0% {
+      transform: translateY(0px);
+    }
+  
+    50% {
+      transform: translateY(-10px);
+    }
+  
+    100% {
+      transform: translateY(0px);
+    }
+  }
+  
+  .floating {
+    animation: floating 5s ease-in-out infinite;
+  }
+  
+  /* ----------------------------------
+     Slow Rotation
+  ---------------------------------- */
+  
+  @keyframes rotateSlow {
+    from {
+      transform: rotate(0deg);
+    }
+  
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  .rotate-slow {
+    animation: rotateSlow 30s linear infinite;
+  }
+  
+  /* ----------------------------------
+     Pulse Glow
+  ---------------------------------- */
+  
+  @keyframes pulseGlow {
+    0% {
+      box-shadow: 0 0 0 rgba(124, 92, 255, 0);
+    }
+  
+    50% {
+      box-shadow: 0 0 24px rgba(124, 92, 255, 0.4);
+    }
+  
+    100% {
+      box-shadow: 0 0 0 rgba(124, 92, 255, 0);
+    }
+  }
+  
+  .pulse-glow {
+    animation: pulseGlow 2.5s ease-in-out infinite;
+  }
+  
+  /* ----------------------------------
+     Gradient Shift
+  ---------------------------------- */
+  
+  @keyframes gradientShift {
+    0% {
+      background-position: 0% 50%;
+    }
+  
+    50% {
+      background-position: 100% 50%;
+    }
+  
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  .gradient-animate {
+    background-size: 200% 200%;
+    animation: gradientShift 10s ease infinite;
+  }
+  
+  /* ----------------------------------
+     Hover Lift
+  ---------------------------------- */
+  
+  .hover-lift {
+    transition:
+      transform 300ms ease,
+      box-shadow 300ms ease;
+  }
+  
+  .hover-lift:hover {
+    transform: translateY(-6px);
+  
+    box-shadow:
+      0 20px 40px rgba(0,0,0,0.35);
+  }
+  
+  /* ----------------------------------
+     Hover Scale
+  ---------------------------------- */
+  
+  .hover-scale {
+    transition: transform 300ms ease;
+  }
+  
+  .hover-scale:hover {
+    transform: scale(1.04);
+  }
+  
+  /* ----------------------------------
+     Smooth Transition
+  ---------------------------------- */
+  
+  .smooth-transition {
+    transition: all 300ms ease;
+  }
+  
+  /* ----------------------------------
+     Animation Delay Helpers
+  ---------------------------------- */
+  
+  .delay-100 {
+    animation-delay: 100ms;
+  }
+  
+  .delay-200 {
+    animation-delay: 200ms;
+  }
+  
+  .delay-300 {
+    animation-delay: 300ms;
+  }
+  
+  .delay-400 {
+    animation-delay: 400ms;
+  }
+  
+  .delay-500 {
+    animation-delay: 500ms;
+  }

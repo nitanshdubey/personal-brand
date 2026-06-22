@@ -1,0 +1,255 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* --------------------------------------------------
+   Google Font
+-------------------------------------------------- */
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
+
+/* --------------------------------------------------
+   Theme
+-------------------------------------------------- */
+
+:root {
+  --color-background: #07090f;
+  --color-surface: rgba(255, 255, 255, 0.04);
+  --color-surface-hover: rgba(255, 255, 255, 0.08);
+
+  --color-text: #f5f7fb;
+  --color-text-secondary: #9ca3af;
+
+  --color-border: rgba(255, 255, 255, 0.08);
+
+  --color-accent: #6366f1;
+  --color-accent-light: #818cf8;
+
+  --radius: 24px;
+
+  --transition: 0.35s ease;
+}
+
+/* --------------------------------------------------
+   Reset
+-------------------------------------------------- */
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-background);
+  color: var(--color-text);
+
+  font-family: "Inter", sans-serif;
+
+  line-height: 1.6;
+
+  overflow-x: hidden;
+
+  -webkit-font-smoothing: antialiased;
+}
+
+/* --------------------------------------------------
+   Images
+-------------------------------------------------- */
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* --------------------------------------------------
+   Links
+-------------------------------------------------- */
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* --------------------------------------------------
+   Sections
+-------------------------------------------------- */
+
+section {
+  position: relative;
+}
+
+/* --------------------------------------------------
+   Container
+-------------------------------------------------- */
+
+.container {
+  width: min(1180px, calc(100% - 2rem));
+  margin-inline: auto;
+}
+
+/* --------------------------------------------------
+   Typography
+-------------------------------------------------- */
+
+h1 {
+  font-size: clamp(3rem, 8vw, 6rem);
+  line-height: 1;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: clamp(2.4rem, 5vw, 4rem);
+  line-height: 1.1;
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 1.45rem;
+  font-weight: 600;
+}
+
+p {
+  color: var(--color-text-secondary);
+}
+
+/* --------------------------------------------------
+   Premium Glass
+-------------------------------------------------- */
+
+.glass {
+  background: var(--color-surface);
+
+  border: 1px solid var(--color-border);
+
+  backdrop-filter: blur(18px);
+
+  -webkit-backdrop-filter: blur(18px);
+
+  transition: var(--transition);
+}
+
+.glass:hover {
+  background: var(--color-surface-hover);
+
+  border-color: rgba(255,255,255,.15);
+
+  transform: translateY(-4px);
+}
+
+/* --------------------------------------------------
+   Gradient Text
+-------------------------------------------------- */
+
+.gradient-text {
+  background: linear-gradient(
+    135deg,
+    #ffffff,
+    var(--color-accent-light)
+  );
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  background-clip: text;
+}
+
+/* --------------------------------------------------
+   Buttons
+-------------------------------------------------- */
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+input,
+textarea {
+  color: white;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #7c7c7c;
+}
+
+/* --------------------------------------------------
+   Selection
+-------------------------------------------------- */
+
+::selection {
+  background: var(--color-accent);
+  color: white;
+}
+
+/* --------------------------------------------------
+   Scrollbar
+-------------------------------------------------- */
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #090909;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2d2d2d;
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* --------------------------------------------------
+   Utility
+-------------------------------------------------- */
+
+.text-muted {
+  color: var(--color-text-secondary);
+}
+
+.text-accent {
+  color: var(--color-accent);
+}
+
+.border-accent {
+  border-color: var(--color-accent);
+}
+
+/* --------------------------------------------------
+   Background Glow
+-------------------------------------------------- */
+
+body::before {
+  content: "";
+
+  position: fixed;
+
+  top: -300px;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  width: 900px;
+  height: 900px;
+
+  background: radial-gradient(
+    circle,
+    rgba(99,102,241,.12),
+    transparent 70%
+  );
+
+  pointer-events: none;
+
+  z-index: -1;
+}
