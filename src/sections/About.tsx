@@ -1,199 +1,23 @@
-/**
- * About Section
- * ---------------------------------------
- * Introduces the educator's mission,
- * philosophy and approach to learning.
- */
-
 import { motion } from "framer-motion";
+import { Rocket, Globe2, BrainCircuit } from "lucide-react";
 
-const About = () => {
-  return (
-    <section
-      id="about"
-      className="relative py-32"
-    >
-      <div className="container">
+const cards=[
+{title:"Mission",label:"Purpose",icon:<Rocket className="h-8 w-8 text-sky-300"/>,gradient:"from-sky-500/15 via-cyan-500/5 to-transparent",text:"To make exceptional education accessible, practical and transformational for every learner."},
+{title:"Vision",label:"Future",icon:<Globe2 className="h-8 w-8 text-violet-300"/>,gradient:"from-violet-500/15 via-fuchsia-500/5 to-transparent",text:"Building a future where lifelong learning empowers meaningful innovation and impact."},
+{title:"Philosophy",label:"Mindset",icon:<BrainCircuit className="h-8 w-8 text-amber-300"/>,gradient:"from-amber-500/15 via-orange-500/5 to-transparent",text:"Learn deeply. Think independently. Apply consistently. Grow continuously."}
+];
 
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.3 }}
-          transition={{ duration: 0.7 }}
-          className="mx-auto max-w-4xl text-center"
-        >
-
-          <span className="mb-4 inline-block rounded-full border border-white/10 px-4 py-2 text-sm uppercase tracking-[0.2em] text-[var(--color-accent)]">
-            About Me
-          </span>
-
-          <h2 className="mb-8">
-            Education is not about
-            <span className="gradient-text"> memorising facts</span>.
-            <br />
-            It's about transforming lives.
-          </h2>
-
-          <p className="mx-auto max-w-3xl text-lg leading-8 text-gray-400">
-            I believe that great education should inspire curiosity,
-            encourage critical thinking, and empower individuals to solve
-            real-world problems. Every lesson, book, and learning experience
-            I create is designed to help people grow with confidence and
-            purpose.
-          </p>
-
-        </motion.div>
-
-        {/* ==========================
-      Premium Mission Cards
-========================== */}
-
-<div className="mt-24 grid gap-8 lg:grid-cols-3">
-
-{/* Mission */}
-
-<motion.div
-  whileHover={{
-    y: -12,
-    rotate: -1,
-    scale: 1.02,
-  }}
-  transition={{
-    type: "spring",
-    stiffness: 250,
-    damping: 20,
-  }}
-  className="group relative overflow-hidden rounded-[32px] border border-white/10 bg-gradient-to-br from-sky-500/10 via-white/5 to-cyan-500/10 p-[1px]"
->
-
-  <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(56,189,248,.25),transparent_60%)] opacity-0 transition duration-500 group-hover:opacity-100" />
-
-  <div className="glass relative h-full rounded-[32px] p-8">
-
-    <div className="mb-8 flex h-16 w-16 items-center justify-center rounded-2xl bg-sky-500/20 text-3xl shadow-[0_0_40px_rgba(56,189,248,.35)]">
-      🚀
-    </div>
-
-    <span className="text-xs uppercase tracking-[0.35em] text-sky-400">
-      Purpose
-    </span>
-
-    <h3 className="mt-3 text-3xl font-bold">
-      Mission
-    </h3>
-
-    <div className="my-6 h-px w-20 bg-gradient-to-r from-sky-400 to-transparent" />
-
-    <p className="leading-8 text-gray-300">
-      To make exceptional education accessible,
-      practical, and transformational for every
-      learner through modern teaching, innovation,
-      and real-world application.
-    </p>
-
-  </div>
-
+export default function About(){
+return(
+<section id="about" className="relative overflow-hidden py-32">
+<div className="absolute left-1/2 top-0 h-[420px] w-[420px] -translate-x-1/2 rounded-full bg-[var(--color-accent)]/10 blur-[140px]" />
+<div className="container relative">
+<motion.div initial={{opacity:0,y:30}} whileInView={{opacity:1,y:0}} viewport={{once:true}} className="mx-auto max-w-4xl text-center">
+<span className="mb-4 inline-block rounded-full border border-white/10 px-4 py-2 text-sm uppercase tracking-[.25em] text-[var(--color-accent)]">About Me</span>
+<h2 className="mb-8">Education is not about <span className="gradient-text">memorising facts</span>.<br/>It's about transforming lives.</h2>
+<p className="mx-auto max-w-3xl text-lg leading-8 text-gray-400">I believe great education inspires curiosity, critical thinking and practical action.</p>
 </motion.div>
-
-
-
-{/* Vision */}
-
-<motion.div
-  whileHover={{
-    y: -12,
-    rotate: 1,
-    scale: 1.02,
-  }}
-  transition={{
-    type: "spring",
-    stiffness: 250,
-    damping: 20,
-  }}
-  className="group relative overflow-hidden rounded-[32px] border border-white/10 bg-gradient-to-br from-violet-500/10 via-white/5 to-fuchsia-500/10 p-[1px]"
->
-
-  <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(168,85,247,.25),transparent_60%)] opacity-0 transition duration-500 group-hover:opacity-100" />
-
-  <div className="glass relative h-full rounded-[32px] p-8">
-
-    <div className="mb-8 flex h-16 w-16 items-center justify-center rounded-2xl bg-violet-500/20 text-3xl shadow-[0_0_40px_rgba(168,85,247,.35)]">
-      🌍
-    </div>
-
-    <span className="text-xs uppercase tracking-[0.35em] text-violet-400">
-      Future
-    </span>
-
-    <h3 className="mt-3 text-3xl font-bold">
-      Vision
-    </h3>
-
-    <div className="my-6 h-px w-20 bg-gradient-to-r from-violet-400 to-transparent" />
-
-    <p className="leading-8 text-gray-300">
-      Building a future where lifelong learning,
-      critical thinking, and innovation empower
-      people to create meaningful impact in society.
-    </p>
-
-  </div>
-
-</motion.div>
-
-
-
-{/* Philosophy */}
-
-<motion.div
-  whileHover={{
-    y: -12,
-    rotate: -1,
-    scale: 1.02,
-  }}
-  transition={{
-    type: "spring",
-    stiffness: 250,
-    damping: 20,
-  }}
-  className="group relative overflow-hidden rounded-[32px] border border-white/10 bg-gradient-to-br from-amber-500/10 via-white/5 to-orange-500/10 p-[1px]"
->
-
-  <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_right,rgba(251,191,36,.25),transparent_60%)] opacity-0 transition duration-500 group-hover:opacity-100" />
-
-  <div className="glass relative h-full rounded-[32px] p-8">
-
-    <div className="mb-8 flex h-16 w-16 items-center justify-center rounded-2xl bg-amber-500/20 text-3xl shadow-[0_0_40px_rgba(251,191,36,.35)]">
-      🧠
-    </div>
-
-    <span className="text-xs uppercase tracking-[0.35em] text-amber-400">
-      Mindset
-    </span>
-
-    <h3 className="mt-3 text-3xl font-bold">
-      Philosophy
-    </h3>
-
-    <div className="my-6 h-px w-20 bg-gradient-to-r from-amber-400 to-transparent" />
-
-    <p className="leading-8 text-gray-300">
-      Learn deeply.
-      Think independently.
-      Apply consistently.
-      Grow continuously.
-      Excellence is built through disciplined action.
-    </p>
-
-  </div>
-
-</motion.div>
-
+<div className="mt-20 grid gap-8 lg:grid-cols-3">{cards.map((c,i)=><motion.article key={c.title} initial={{opacity:0,y:30}} whileInView={{opacity:1,y:0}} viewport={{once:true}} transition={{delay:i*.15}} whileHover={{y:-10,scale:1.02,rotate:i%2?1:-1}} className="group relative overflow-hidden rounded-[32px] border border-white/10 bg-white/5 p-[1px]"><div className={`absolute inset-0 bg-gradient-to-br ${c.gradient} opacity-0 transition group-hover:opacity-100`} /><div className="glass relative h-full rounded-[32px] p-8"><div className="mb-6 flex h-16 w-16 items-center justify-center rounded-2xl bg-[var(--color-accent)]/15">{c.icon}</div><p className="text-xs uppercase tracking-[.3em] text-[var(--color-accent)]">{c.label}</p><h3 className="mt-3 text-3xl font-bold">{c.title}</h3><div className="my-6 h-px w-20 bg-gradient-to-r from-[var(--color-accent)] to-transparent"/><p className="leading-8 text-gray-300">{c.text}</p></div></motion.article>)}</div>
 </div>
-
-      </div>
-    </section>
-  );
-};
-
-export default About;
+</section>
+)}
