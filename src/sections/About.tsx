@@ -44,61 +44,152 @@ const About = () => {
 
         </motion.div>
 
-        {/* Mission Cards */}
+        {/* ==========================
+      Premium Mission Cards
+========================== */}
 
-        <div className="mt-20 grid gap-8 md:grid-cols-3">
+<div className="mt-24 grid gap-8 lg:grid-cols-3">
 
-          <motion.div
-            whileHover={{
-              y: -8,
-            }}
-            className="glass rounded-3xl p-8"
-          >
-            <h3 className="mb-4 text-2xl">
-              Mission
-            </h3>
+{/* Mission */}
 
-            <p>
-              To make quality education accessible,
-              practical and inspiring for every learner.
-            </p>
-          </motion.div>
+<motion.div
+  whileHover={{
+    y: -12,
+    rotate: -1,
+    scale: 1.02,
+  }}
+  transition={{
+    type: "spring",
+    stiffness: 250,
+    damping: 20,
+  }}
+  className="group relative overflow-hidden rounded-[32px] border border-white/10 bg-gradient-to-br from-sky-500/10 via-white/5 to-cyan-500/10 p-[1px]"
+>
 
-          <motion.div
-            whileHover={{
-              y: -8,
-            }}
-            className="glass rounded-3xl p-8"
-          >
-            <h3 className="mb-4 text-2xl">
-              Vision
-            </h3>
+  <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(56,189,248,.25),transparent_60%)] opacity-0 transition duration-500 group-hover:opacity-100" />
 
-            <p>
-              Building a future where learning never
-              stops and knowledge creates meaningful impact.
-            </p>
-          </motion.div>
+  <div className="glass relative h-full rounded-[32px] p-8">
 
-          <motion.div
-            whileHover={{
-              y: -8,
-            }}
-            className="glass rounded-3xl p-8"
-          >
-            <h3 className="mb-4 text-2xl">
-              Philosophy
-            </h3>
+    <div className="mb-8 flex h-16 w-16 items-center justify-center rounded-2xl bg-sky-500/20 text-3xl shadow-[0_0_40px_rgba(56,189,248,.35)]">
+      🚀
+    </div>
 
-            <p>
-              Learn deeply.
-              Think independently.
-              Apply consistently.
-              Grow continuously.
-            </p>
-          </motion.div>
+    <span className="text-xs uppercase tracking-[0.35em] text-sky-400">
+      Purpose
+    </span>
 
-        </div>
+    <h3 className="mt-3 text-3xl font-bold">
+      Mission
+    </h3>
+
+    <div className="my-6 h-px w-20 bg-gradient-to-r from-sky-400 to-transparent" />
+
+    <p className="leading-8 text-gray-300">
+      To make exceptional education accessible,
+      practical, and transformational for every
+      learner through modern teaching, innovation,
+      and real-world application.
+    </p>
+
+  </div>
+
+</motion.div>
+
+
+
+{/* Vision */}
+
+<motion.div
+  whileHover={{
+    y: -12,
+    rotate: 1,
+    scale: 1.02,
+  }}
+  transition={{
+    type: "spring",
+    stiffness: 250,
+    damping: 20,
+  }}
+  className="group relative overflow-hidden rounded-[32px] border border-white/10 bg-gradient-to-br from-violet-500/10 via-white/5 to-fuchsia-500/10 p-[1px]"
+>
+
+  <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(168,85,247,.25),transparent_60%)] opacity-0 transition duration-500 group-hover:opacity-100" />
+
+  <div className="glass relative h-full rounded-[32px] p-8">
+
+    <div className="mb-8 flex h-16 w-16 items-center justify-center rounded-2xl bg-violet-500/20 text-3xl shadow-[0_0_40px_rgba(168,85,247,.35)]">
+      🌍
+    </div>
+
+    <span className="text-xs uppercase tracking-[0.35em] text-violet-400">
+      Future
+    </span>
+
+    <h3 className="mt-3 text-3xl font-bold">
+      Vision
+    </h3>
+
+    <div className="my-6 h-px w-20 bg-gradient-to-r from-violet-400 to-transparent" />
+
+    <p className="leading-8 text-gray-300">
+      Building a future where lifelong learning,
+      critical thinking, and innovation empower
+      people to create meaningful impact in society.
+    </p>
+
+  </div>
+
+</motion.div>
+
+
+
+{/* Philosophy */}
+
+<motion.div
+  whileHover={{
+    y: -12,
+    rotate: -1,
+    scale: 1.02,
+  }}
+  transition={{
+    type: "spring",
+    stiffness: 250,
+    damping: 20,
+  }}
+  className="group relative overflow-hidden rounded-[32px] border border-white/10 bg-gradient-to-br from-amber-500/10 via-white/5 to-orange-500/10 p-[1px]"
+>
+
+  <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_right,rgba(251,191,36,.25),transparent_60%)] opacity-0 transition duration-500 group-hover:opacity-100" />
+
+  <div className="glass relative h-full rounded-[32px] p-8">
+
+    <div className="mb-8 flex h-16 w-16 items-center justify-center rounded-2xl bg-amber-500/20 text-3xl shadow-[0_0_40px_rgba(251,191,36,.35)]">
+      🧠
+    </div>
+
+    <span className="text-xs uppercase tracking-[0.35em] text-amber-400">
+      Mindset
+    </span>
+
+    <h3 className="mt-3 text-3xl font-bold">
+      Philosophy
+    </h3>
+
+    <div className="my-6 h-px w-20 bg-gradient-to-r from-amber-400 to-transparent" />
+
+    <p className="leading-8 text-gray-300">
+      Learn deeply.
+      Think independently.
+      Apply consistently.
+      Grow continuously.
+      Excellence is built through disciplined action.
+    </p>
+
+  </div>
+
+</motion.div>
+
+</div>
 
       </div>
     </section>

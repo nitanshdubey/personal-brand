@@ -21,7 +21,7 @@ const books: Book[] = [
     description:
       "Develop habits and mental models that help you become a lifelong learner.",
     cover:
-      "https://placehold.co/500x700/111111/FFFFFF?text=Book+01",
+      "https://github.com/nitanshdubey/personal-brand/blob/main/nik-z1d-LP8sjuI-unsplash.jpg?raw=true",
   },
   {
     title: "Mastering Knowledge",
@@ -29,7 +29,7 @@ const books: Book[] = [
     description:
       "A practical guide to learning faster, thinking clearly, and applying knowledge.",
     cover:
-      "https://placehold.co/500x700/181818/FFFFFF?text=Book+02",
+      "https://github.com/nitanshdubey/personal-brand/blob/main/jaredd-craig-HH4WBGNyltc-unsplash.jpg?raw=true",
   },
   {
     title: "Lead Through Wisdom",
@@ -37,7 +37,7 @@ const books: Book[] = [
     description:
       "Timeless principles for leading with clarity, confidence, and integrity.",
     cover:
-      "https://placehold.co/500x700/222222/FFFFFF?text=Book+03",
+      "https://github.com/nitanshdubey/personal-brand/blob/main/matteo-vistocco-Dph00R2SwFo-unsplash.jpg?raw=true",
   },
 ];
 
